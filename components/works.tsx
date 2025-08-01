@@ -25,7 +25,7 @@ function Works() {
     ];
 
     return (
-        <section className='py-16 px-6 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700'>
+        <section className='py-16 px-6 bg-[#4A3AFF]'>
             <div className='max-w-6xl mx-auto'>
                 <div className='flex items-center gap-12'>
                     {/* Left Side - Content */}

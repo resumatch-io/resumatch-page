@@ -63,7 +63,7 @@ function FAQ() {
                 className='w-full flex justify-between items-center p-6 text-left'
               >
                 <h3 className='text-lg font-semibold text-gray-900'>{faq.question}</h3>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'bg-[#4A3AFF] text-white' : 'bg-gray-100 text-gray-600'}`}>
                   {openIndex === index ? <X size={18} /> : <Plus size={18} />}
                 </div>
               </button>

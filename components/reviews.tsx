@@ -82,7 +82,7 @@ function Reviews() {
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <Star key={i} className="w-4 h-4 fill-blue-500 text-blue-500" />
+        <Star key={i} className="w-4 h-4 fill-[#4A3AFF] text-[#4A3AFF]" />
       );
     }
 
@@ -91,7 +91,7 @@ function Reviews() {
         <div key="half" className="relative">
           <Star className="w-4 h-4 text-gray-300" />
           <div className="absolute inset-0 overflow-hidden w-1/2">
-            <Star className="w-4 h-4 fill-blue-500 text-blue-500" />
+            <Star className="w-4 h-4 fill-[#4A3AFF] text-[#4A3AFF]" />
           </div>
         </div>
       );
@@ -129,14 +129,14 @@ function Reviews() {
           <div className='flex gap-2'>
             <button 
               onClick={prevReview}
-              className='w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200'
+              className='w-12 h-12 bg-[#4A3AFF] hover:bg-[#4A3AFF] text-white rounded-full flex items-center justify-center transition-colors duration-200'
               disabled={currentIndex === 0}
             >
               <ChevronLeft className='w-5 h-5' />
             </button>
             <button 
               onClick={nextReview}
-              className='w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200'
+              className='w-12 h-12 bg-[#4A3AFF] hover:bg-[#4A3AFF] text-white rounded-full flex items-center justify-center transition-colors duration-200'
               disabled={currentIndex + 3 >= reviews.length}
             >
               <ChevronRight className='w-5 h-5' />

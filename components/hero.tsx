@@ -4,16 +4,9 @@ import Image from 'next/image';
 
 function Hero() {
     return (
-        <main className='flex flex-col items-center justify-center min-h-screen relative px-6 overflow-hidden'>
-            {/* Background Elements */}
-            <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(74,58,255,0.24)] to-[rgba(74,58,255,0)]'></div>
-            <div className='absolute left-0 top-0 w-[592px] h-full bg-gradient-to-br from-transparent via-transparent to-white opacity-80'></div>
-            <div className='absolute right-0 top-0 w-[592px] h-full bg-gradient-to-bl from-transparent via-transparent to-white opacity-80'></div>
-            
-            {/* Content */}
-            <div className='relative z-10 flex flex-col items-center justify-center'>
-                {/* Top Info Section */}
-                <div className='text-center flex items-center border-gray-200 border justify-center rounded-full px-6 mb-4'>
+        <main className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-50 to-white px-6 pt-6'>
+            {/* Top Info Section */}
+            <div className='text-center flex items-center border-gray-200 border justify-center rounded-full px-6 mb-4'>
                 <Dot className="text-[#4A3AFF]" size={48} />
                 <p className='text-[14px]'>46,912 resumes created today</p>
             </div>
@@ -32,7 +25,7 @@ function Hero() {
 
             {/* Call to Action and Rating Section */}
             <div className='flex flex-col items-center text-center mb-4 relative'>
-                <div className='flex items-center justify-center mb-6'>
+                <div className='relative flex items-center justify-center mb-6'>
                     <button className='flex items-center bg-[#4A3AFF] text-white px-8 py-4 rounded-lg hover:bg-[#3A2ADF] transition-colors duration-200 font-medium text-lg'>
                         <Video className='mr-3' size={24} />
                         Get Started Now
@@ -40,9 +33,9 @@ function Hero() {
                     <Image
                         src="/arrow.svg"
                         alt="arrow pointing down"
-                        width={60}
-                        height={60}
-                        className="ml-8"
+                        width={80}
+                        height={80}
+                        className="absolute right-[-100px] top-1/2 transform -translate-y-1/2"
                     />
                 </div>
                 <div className='flex items-center mt-4'>
@@ -65,7 +58,6 @@ function Hero() {
                     height={700}
                     className="rounded-lg shadow-lg"
                 />
-            </div>
             </div>
         </main>
     )

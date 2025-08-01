@@ -35,7 +35,7 @@ const ScrollBox: React.FC<ScrollBoxProps> = ({ solutions }) => {
             <div className="w-1/2 p-6 flex flex-col justify-center">
               <div className="max-w-sm">
                 {/* Solution Index */}
-                <div className="text-blue-600 font-medium mb-2">
+                <div className="text-[#4A3AFF] font-medium mb-2">
                   Solution {index + 1}
                 </div>
                 

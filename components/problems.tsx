@@ -1,42 +1,42 @@
 import React from 'react';
-import { FileText, Users, MessageCircle, RefreshCw, Clock, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 function Problems() {
   const problems = [
     {
-      icon: <FileText className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/1.svg',
       title: "ATS Compatibility",
       description: "Many resumes fail ATS scans due to poor formatting, missing keywords, or irrelevant content."
     },
     {
-      icon: <FileText className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/2.svg',
       title: "Generic Resumes",
       description: "Many job seekers use generic resumes that ignore specific job requirements or industry standards."
     },
     {
-      icon: <MessageCircle className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/3.svg',
       title: "Lacking Confidence",
       description: "Many candidates struggle with interviews, from common questions to effective self-presentation."
     },
     {
-      icon: <RefreshCw className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/4.svg',
       title: "Unclear Feedback Loop",
       description: "Job seekers often lack feedback on rejections or interview performance, missing actionable insights."
     },
     {
-      icon: <Clock className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/5.svg',
       title: "Time Constraints",
       description: "Customizing resumes, interview prep and job analysis can be overwhelming."
     },
     {
-      icon: <TrendingUp className="text-[#4A3AFF]" size={48} />,
+      icon: '/problems/6.svg',
       title: "High Competition",
       description: "Standing out among hundreds of applicants is increasingly challenging without a clear edge."
     }
   ];
 
   return (
-    <section className='py-16 px-6 bg-gray-50'>
+    <section className='py-16 px-6 bg-white'>
       <div className='max-w-6xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-12'>
@@ -53,11 +53,36 @@ function Problems() {
         {/* Problems Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {problems.map((problem, index) => (
-            <div key={index} className='bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 h-64 flex flex-col justify-between'>
-              <div className='flex items-start'>
-                {problem.icon}
+            <div
+              key={index}
+              className='group relative p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 h-72 flex flex-col justify-between bg-gray-200 overflow-hidden'
+            >
+              <Image
+                src='/R.svg'
+                alt='background arrow'
+                width={140}
+                height={288}
+                className='absolute left-0 top-0 w-auto h-full object-cover z-0 group-hover:hidden'
+                style={{ height: '100%' }}
+              />
+              <Image
+                src='/colorarrow.svg'
+                alt='hover arrow'
+                width={140}
+                height={288}
+                className='absolute left-0 top-0 w-auto h-full object-cover z-0 hidden group-hover:block'
+                style={{ height: '100%' }}
+              />
+              <div className='relative z-10 flex items-start'>
+                <Image
+                  src={problem.icon}
+                  alt={problem.title}
+                  width={48}
+                  height={48}
+                  className='text-[#4A3AFF]'
+                />
               </div>
-              <div>
+              <div className='relative z-10'>
                 <h3 className='text-xl font-bold text-gray-900 mb-4'>
                   {problem.title}
                 </h3>

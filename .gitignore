@@ -39,28 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Bun cache and install directories
-.bun/
-bun.lockb
-
-# Anima cache
-.anima/
-
-# System files
-.DS_Store*
-Thumbs.db
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Log files
-*.log
-
-# Cache directories
-.cache/
-.temp/
-.tmp/

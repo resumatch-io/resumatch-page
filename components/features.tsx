@@ -7,33 +7,33 @@ function Features() {
   const features = [
     {
       id: 0,
-      icon: '📄',
+      icon: <img src="/fi1.svg" alt="Feature 1" className="w-6 h-6" />,
       title: 'Tailored Resume & Cover Letter',
       subtitle: 'Easy to Create Resume & Cover Letter',
-      heading: 'Tailored Resume & Cover Letter',
+      heading: 'Tailored Resume\n& Cover Letter',
       description: 'Resumatch.io aligns your resume with job descriptions, highlighting your key strengths to grab recruiters\' attention and boost your chances of getting interviews.',
       buttonText: 'Build Resume Now',
-      image: '/images/resume-preview.png'
+      image: '/f1.png'
     },
     {
       id: 1,
-      icon: '🎯',
+      icon: <img src="/fi2.svg" alt="Feature 2" className="w-6 h-6" />,
       title: 'Interview Prep Tools',
       subtitle: 'Ace Your Interview with AI Assistance',
       heading: 'Interview Prep Tools',
       description: 'Get personalized interview questions, practice with AI feedback, and build confidence with our comprehensive interview preparation tools.',
       buttonText: 'Start Practicing',
-      image: '/images/interview-prep.png'
+      image: '/f2.png'
     },
     {
       id: 2,
-      icon: '📊',
+      icon: <img src="/fi3.svg" alt="Feature 3" className="w-6 h-6" />,
       title: 'Job Matches & Insights',
       subtitle: 'Find Perfect Job Matches',
       heading: 'Job Matches & Insights',
       description: 'Discover job opportunities that match your skills and experience with detailed insights and compatibility scores.',
       buttonText: 'Explore Jobs',
-      image: '/images/job-matches.png'
+      image: '/f3.png'
     }
   ];
 
@@ -50,33 +50,34 @@ function Features() {
         </div>
 
         {/* Feature Navigation Tabs */}
-        <div className='flex justify-center mb-8 gap-4'>
+        <div className='flex justify-center mb-12 gap-4'>
           {features.map((feature) => (
             <button 
               key={feature.id}
               onClick={() => setActiveFeature(feature.id)}
-              className={`px-6 py-3 rounded-full font-medium shadow-sm transition-colors flex items-center ${
+              className={`px-8 py-4 rounded-full  font-medium transition-colors flex items-center ${
                 activeFeature === feature.id
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  ? 'bg-[#4A3AFF] text-white shadow-lg'
                   : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
               }`}
             >
-              <span className='mr-2'>{feature.icon}</span>
+              <span className='mr-3 text-xl'>{feature.icon}</span>
               {feature.title}
             </button>
           ))}
         </div>
 
         {/* Main Feature Card */}
-        <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 shadow-lg'>
-          <div className='flex items-center'>
+        <div className='bg-[#4A3AFF] rounded-3xl p-12 shadow-xl'>
+          <div className='flex items-center gap-12'>
             {/* Left Side - Feature Image */}
-            <div className='w-1/2 pr-8'>
-              <div className='bg-white rounded-xl p-6 shadow-lg'>
+            <div className='w-1/2'>
+              <div className='bg-gray-400 rounded-2xl p-6 shadow-lg'>
+                {/* Mock Resume Preview */}
                 <img 
-                  src={features[activeFeature].image}
-                  alt={features[activeFeature].title}
-                  className='rounded-lg w-full object-cover'
+                  src={features[activeFeature].image} 
+                  alt={features[activeFeature].title} 
+                  className='w-full h-auto rounded-lg'
                 />
               </div>
             </div>
@@ -84,15 +85,15 @@ function Features() {
             {/* Right Side - Feature Content */}
             <div className='w-1/2 text-white'>
               <div className='mb-4'>
-                <span className='text-blue-200 text-sm font-medium'>{features[activeFeature].subtitle}</span>
+                <span className='text-white/80 text-base font-medium'>{features[activeFeature].subtitle}</span>
               </div>
-              <h2 className='text-4xl font-bold mb-6 leading-tight'>
+              <h2 className='text-5xl font-bold mb-6 leading-tight whitespace-pre-line'>
                 {features[activeFeature].heading}
               </h2>
-              <p className='text-blue-100 text-lg leading-relaxed mb-8'>
+              <p className='text-white/90 text-lg leading-relaxed mb-8'>
                 {features[activeFeature].description}
               </p>
-              <button className='bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200'>
+              <button className='bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-200'>
                 {features[activeFeature].buttonText}
               </button>
             </div>
