@@ -34,7 +34,7 @@ function Works() {
                         <div className='mb-8'>
                             <div className='inline-flex items-center justify-center mb-4 border-white border rounded-full px-4 py-1'>
                                 <div className='w-2 h-2 bg-white rounded-full mr-2'></div>
-                                <span className='text-white font-medium text-sm'>Our Solutions</span>
+                                <span className='text-white font-medium text-sm'>How it Works</span>
                             </div>
                             <h2 className='text-4xl md:text-5xl font-bold mb-4 leading-tight'>
                                 How resume<br />
@@ -43,29 +43,33 @@ function Works() {
                             <p className='text-blue-100 text-lg leading-relaxed'>
                                 Our AI system focuses on key aspects of your resume
                             </p>
+                            <div className='border-t border-gray-300 mt-4'></div>
                         </div>
 
                         {/* Steps */}
-                        <div className='space-y-6'>
+                        <div className='space-y-8'>
                             {steps.map((step, index) => (
                                 <div key={step.number} className='flex items-start'>
                                     {/* Step Number */}
-                                    <div className='flex-shrink-0 mr-4'>
-                                        <div className='w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
-                                            <span className='text-white font-bold text-sm'>Step {step.number}</span>
+                                    <div className='flex-shrink-0 mr-6'>
+                                        <div className='bg-white bg-opacity-20 rounded-2xl px-4 py-2'>
+                                            <span className='text-black font-medium text-sm'>Step {step.number}</span>
                                         </div>
                                     </div>
 
                                     {/* Step Content */}
                                     <div className='flex-1'>
-                                        <h3 className='text-xl font-bold text-white mb-2'>
+                                        <h3 className='text-2xl font-bold text-white mb-4'>
                                             {step.title}
                                         </h3>
-                                        <p className='text-blue-100 leading-relaxed'>
+                                        <p className='text-white/80 leading-relaxed text-base'>
                                             {step.description}
                                         </p>
+                                           <div className='border-t border-gray-300 mt-4'></div>
                                     </div>
+                                    <div className='border-t border-gray-300 mt-4'></div>
                                 </div>
+                                
                             ))}
                         </div>
                     </div>

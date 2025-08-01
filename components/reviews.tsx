@@ -145,9 +145,9 @@ function Reviews() {
         </div>
 
         {/* Reviews Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
           {visibleReviews.map((review, index) => (
-            <div key={review.id} className='bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300'>
+            <div key={review.id} className=' rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 bg-[#4A3AFF]/5'>
               {/* Stars */}
               <div className='flex items-center mb-4'>
                 {renderStars(review.rating)}
